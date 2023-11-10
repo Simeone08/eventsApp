@@ -71,7 +71,7 @@ export default function Routes() {
                     tabBarIcon: ({ color, size }) => (
                         <Feather name="info" size={size} color={color} />
                     ),
-                }} 
+                }}
             />
 
         </Tab.Navigator>
