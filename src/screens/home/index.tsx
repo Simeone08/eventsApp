@@ -1,11 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import { Testando } from './styles';
 
-export default function Index() {
+export default function Home() {
   return (
     <>
       <StatusBar style="auto" />
-      <Testando></Testando>
+      <Testando>test</Testando>
     </>
   );
 }
