@@ -19,9 +19,7 @@ export default function Partners(){
       async function fetchPartners(){
         try {
           const response = await Api.get(`https://api.doity.com.br/public/aplicativos/v2/eventos/24043/parceiros?sort=ordem&direction=ASC&limit=200&d_rdhid=59c654f003e03cb1f34fb921af330a24cb619c99`);
-          //console.log(">>>>>>",response.data);
-          //console.log("-------",response.data.parceiros[0].categoria);
-    
+
           setData(response.data);
         } catch (error) {
           console.log(error)

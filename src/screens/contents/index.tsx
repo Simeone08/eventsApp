@@ -12,11 +12,9 @@ export default function Contents(){
     const [loading, setLoading] = useState(true);
     
     useEffect(() => {
-      async function fetchPartners(){
+      async function fetchConteudos(){
         try {
           const response = await Api.get('https://api.doity.com.br/public/aplicativos/v2/eventos/24043/apps/20/conteudos?ativo=1&sort=ordem&direction=asc&limit=200&d_rdhid=59c654f003e03cb1f34fb921af330a24cb619c99');
-          //console.log(">>>>>>",response.data);
-          //console.log("-------",response.data.parceiros[0].categoria);
     
           setData(response.data);
         } catch (error) {
@@ -26,7 +24,7 @@ export default function Contents(){
         }
       }
     
-      fetchPartners();
+      fetchConteudos();
     }, []);
     
     type ItemProps = {conteudos: string};

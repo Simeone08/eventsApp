@@ -11,6 +11,23 @@ export const Container = styled.View`
     background-color: #DBDBDB;
 `;
 
-export const Title = styled.Text``;
+export const ContainerImagem = styled.View`
+    border: 1px solid;
 
-export const Empresa = styled.Text``;
+    width: 80px;
+    height: 80px;
+`;
+
+export const PalestranteImagem = styled.Image``;
+
+export const ContainerDescriptions = styled.View``;
+
+export const Title = styled.Text`
+    font-size: 14px;
+    margin-left: 10px;
+`;
+
+export const Empresa = styled.Text`
+    font-size: 14px;
+    margin-left: 10px;
+`;
