@@ -1,18 +1,19 @@
 import React, { useEffect, useState } from "react";
-import { Sch } from "./styles";
 import Api from "../../services/api";
-import { FlatList, View, Text } from "react-native";
-import axios from "axios";
+import { FlatList } from "react-native";
+import { Cards } from "../../components/cards";
+import { Container } from './styles';
 
 export default function Schedule(){
 const [data, setData] = useState([]);
 const [loading, setLoading] = useState(true);
 
 useEffect(() => {
-  async function fetchCars(){
+  async function fetchProg(){
     try {
-      const response = await Api.get(`https://api.doity.com.br/public/aplicativos/v2/eventos/24043/parceiros?sort=ordem&direction=ASC&limit=200&d_rdhid=59c654f003e03cb1f34fb921af330a24cb619c99`);
-      console.log(response.data);
+      const response = await Api.get(`https://api.doity.com.br/public/aplicativos/v2/eventos/24043/atividades_horarios?sort=hora_inicio&direction=ASC&limit=200&d_rdhid=59c654f003e03cb1f34fb921af330a24cb619c99`);
+      //console.log(">>>>>>",response.data);
+      //console.log("-------",response.data.horarios[0].atividade);
 
       setData(response.data);
     } catch (error) {
@@ -22,24 +23,37 @@ useEffect(() => {
     }
   }
 
-  fetchCars();
+  fetchProg();
 }, []);
 
-  const sch = ({item}) => {
-    return(
-        <View>
-            <Text>{item.id}</Text>
-        </View>
-    )
-  }
+type ItemProps = {schedule: string};
+
+const Item = ({schedule}: ItemProps) => {
+  let nome = schedule.atividade.nome;
+  let descricao = schedule.atividade.descricao
+  let local = schedule.atividade.local
+  let data = schedule.data_atividade
+  let hora = schedule.hora_inicio
+
+  return(
+    <Container>
+      <Cards 
+        title={nome}
+        description={descricao}
+        local={local}
+        date={data}
+        hour={hora}
+      />
+    </Container>
+)};
 
     return(
         <>
-        <FlatList 
-            data={data}
-            keyExtractor={(item) => item.id.toString()}
-            renderItem={sch}
-        />
+         <FlatList
+        data={data.schedule}
+        renderItem={({item}) => <Item schedule={item} />}
+        keyExtractor={item => item.id}
+      />
         </>
     );
 }

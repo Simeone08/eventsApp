@@ -2,12 +2,13 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import Home from './screens/home';
-import Content from './screens/content';
+import Content from './screens/contents';
 import Notifications from './screens/notifications';
 import Partners from './screens/partners';
 import Schedule from './screens/schedule';
 
 import { Entypo, Feather } from '@expo/vector-icons';
+import { Palestrantes } from './screens/palestrantes';
 
 const Tab = createBottomTabNavigator();
 
@@ -70,6 +71,16 @@ export default function Routes() {
                 options={{
                     tabBarIcon: ({ color, size }) => (
                         <Feather name="info" size={size} color={color} />
+                    ),
+                }}
+            />
+
+                        <Tab.Screen 
+                name="Palestrantes" 
+                component={Palestrantes} 
+                options={{
+                    tabBarIcon: ({ color, size }) => (
+                        <Feather name="mic" size={size} color={color} />
                     ),
                 }}
             />
