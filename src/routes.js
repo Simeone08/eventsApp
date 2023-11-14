@@ -46,16 +46,6 @@ export default function Routes() {
             />
             
             <Tab.Screen 
-                name="Notificações" 
-                component={Notifications} 
-                options={{
-                    tabBarIcon: ({ color, size }) => (
-                        <Entypo name="notification" size={size} color={color} />
-                    ),
-                }} 
-            />
-            
-            <Tab.Screen 
                 name="Parceiros" 
                 component={Partners} 
                 options={{
@@ -75,7 +65,7 @@ export default function Routes() {
                 }}
             />
 
-                        <Tab.Screen 
+            <Tab.Screen 
                 name="Palestrantes" 
                 component={Palestrantes} 
                 options={{
