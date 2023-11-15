@@ -3,7 +3,6 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import Home from './screens/home';
 import Content from './screens/contents';
-import Notifications from './screens/notifications';
 import Partners from './screens/partners';
 import Schedule from './screens/schedule';
 
@@ -17,12 +16,16 @@ export default function Routes() {
         <Tab.Navigator
             screenOptions={{
                 tabBarActiveTintColor: 'red',
+                tabBarInactiveTintColor: '#FFF',
                 tabBarStyle:{
                     paddingBottom: 20,
                     paddingTop: 5,
-                    backgroundColor: 'black',
+                    backgroundColor: '#808080',
                 },
-                
+                headerStyle:{
+                    backgroundColor: '#808080',
+                },
+                headerTintColor: 'black',
             }}
         >
             <Tab.Screen 

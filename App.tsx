@@ -4,7 +4,6 @@ import { useFonts, Inter_400Regular, Inter_700Bold } from "@expo-google-fonts/in
 import { NavigationContainer } from "@react-navigation/native";
 import Routes from "./src/routes";
 
-import Home from './src/screens/home';
 import theme from "./src/Styles/theme";
 
 export default function App() {
