@@ -1,13 +1,13 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import Home from './screens/home';
-import Content from './screens/contents';
-import Partners from './screens/partners';
-import Schedule from './screens/schedule';
+import Home from '../screens/home';
+import Content from '../screens/contents';
+import Partners from '../screens/partners';
+import Schedule from '../screens/schedule';
+import { Palestrantes } from '../screens/palestrantes';
 
 import { Entypo, Feather } from '@expo/vector-icons';
-import { Palestrantes } from './screens/palestrantes';
 
 const Tab = createBottomTabNavigator();
 
