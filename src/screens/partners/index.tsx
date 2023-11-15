@@ -41,7 +41,7 @@ export default function Partners(){
       return(
         <Container>
             <ContainerImagem>
-                <ParceiroImage source={{imagem}} />
+                <ParceiroImage source={{uri: imagem}} />
             </ContainerImagem>
 
             <ContainerDados>
