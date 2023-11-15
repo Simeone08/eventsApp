@@ -18,8 +18,8 @@ export const ContainerImagem = styled.View`
 `;
 
 export const ParceiroImage = styled.Image`
-    height: 50px;
-    width: 50px;
+    height: 100px;
+    width: 175px;
 `;
 
 export const ContainerDados = styled.View`

@@ -18,7 +18,10 @@ export const ContainerImagem = styled.View`
     height: 80px;
 `;
 
-export const PalestranteImagem = styled.Image``;
+export const PalestranteImagem = styled.Image`
+    height: 80px;
+    width: 80px;
+`;
 
 export const ContainerDescriptions = styled.View``;
 

@@ -40,7 +40,7 @@ export const Palestrantes = () => {
       return(
         <Container>
             <ContainerImagem>
-                <PalestranteImagem source={{imagem}} />
+                <PalestranteImagem source={{uri: imagem}} />
             </ContainerImagem>
 
             <ContainerDescriptions>

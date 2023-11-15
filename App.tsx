@@ -2,10 +2,10 @@ import { ThemeProvider } from "styled-components/native";
 import { useFonts, Inter_400Regular, Inter_700Bold } from "@expo-google-fonts/inter";
 
 import { NavigationContainer } from "@react-navigation/native";
-import Routes from "./src/routes";
 
-import Home from './src/screens/home';
+
 import theme from "./src/Styles/theme";
+import Routes from "./src/Routes/routes";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
