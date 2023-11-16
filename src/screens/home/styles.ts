@@ -6,7 +6,7 @@ export const Container = styled.View`
     align-items: center;
     justify-content: center;
 
-    margin-top: 20%;
+    margin-top: 5%;
 `;
 
 export const ResumeContainer = styled.View`
@@ -19,5 +19,18 @@ export const ResumeContainer = styled.View`
     justify-content: space-evenly;
     gap: 20px;
 `;
-export const Testando = styled.Button`
+
+export const Notificacao = styled.TouchableOpacity`
+    border: red;
+
+    width: 152px;
+    height: 40px;
+
+    margin-left: 197px;
+
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `;

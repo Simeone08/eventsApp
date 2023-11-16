@@ -14,14 +14,14 @@ export const Container = styled.View`
 `;
 
 export const DashButton = styled.TouchableOpacity`
-    height: 31%;
-    width: 102%;
+    height: 21%;
+    width: 101%;
     position: absolute;
 
     align-items: center;
     justify-content: center;
 
-    margin-top: 120%;
+    margin-top: 140%;
 
     border-radius: 0 0 8px 8px;
     
