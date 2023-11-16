@@ -27,6 +27,7 @@ export default function Routes() {
                     backgroundColor: '#808080',
                 },
                 headerTintColor: 'black',
+                headerTitleAlign: 'center',
             }}
         >
             <Tab.Screen 
