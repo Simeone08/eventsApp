@@ -12,8 +12,7 @@ export const Container = styled.View`
 `;
 
 export const ContainerImagem = styled.View`
-    border: 1px solid;
-    width: 50%;
+    width: 58%;
     height: 100px;
 `;
 

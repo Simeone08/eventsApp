@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { Text } from 'react-native';
+import { Platform, Text } from 'react-native';
 import { 
   Container,
   ResumeContainer,
@@ -12,8 +12,8 @@ import { useNavigation } from '@react-navigation/native';
 Notifications.setNotificationHandler({
   handleNotification: async () => ({
     shouldShowAlert: true,
-    shouldPlaySound: false,
-    shouldSetBadge: false,
+    shouldPlaySound: true,
+    shouldSetBadge: true,
   }),
 });
 
@@ -22,20 +22,13 @@ export default function Home() {
   const navigation = useNavigation();
 
   const handleNotification = async () => {
-    const { status } = await Notifications.getPermissionsAsync();
-      if (status!== 'granted') {
-        alert('Not granted')
-        return;
-      }
     
     await Notifications.scheduleNotificationAsync({
       content: {
         title: 'Teste',
         body: 'Teste',
       },
-      trigger: {
-        seconds: 3,
-      }
+      trigger: null,
     });
   };
 
